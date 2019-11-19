@@ -1,0 +1,36 @@
+<div style="text-align: center" >
+  <!-- <img [src]="url" height="400" alt="Uploaded image will be shown here"> <br />
+  <input type='file' (change)="onSelectFile($event)"><br>
+  <button type="submit" class="confirm"(click) = 
+'add()'>Confirm</button>
+  <h1>Ticket Details</h1> -->
+  <h3>Ticket upload in JPG, JPEG ,PNG Format</h3>
+<img [src]="url" height="400" alt="Uploaded image will be shown here"> <br />
+<input type="file" (change)="onFileSelected($event)" ><br>
+<button type="button" (click)="onUpload()">Upload</button><br><br>
+
+<div class="col-md-12">
+    <mat-form-field>
+      <input matInput #ticketNumber required placeholder="TicketNumber">
+    </mat-form-field><br>
+    <mat-form-field>
+        <input matInput #price required placeholder="Price on Ticket">
+      </mat-form-field><br>
+      <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder=" Journey Date" #picker required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field><br>
+
+      <mat-form-field>
+          <input matInput #distance required placeholder="Distance Travelled">
+        </mat-form-field>
+      </div>
+      <mat-checkbox>I agree to the Terms and Conditions</mat-checkbox><br>
+
+
+  <button type="button"
+  (click)="saveTicket(ticketNumber.value, price.value ,picker._validSelected,  distance.value)">Click here to save</button>
+
+
+</div>

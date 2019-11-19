@@ -1,0 +1,25 @@
+<h2 style="text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; background-color: whitesmoke; color: black; margin-top:0px ">Tickets History</h2>
+
+<!-- <button (click)=showAllRepo()>Show all Repo</button> -->
+<!-- <div *ngFor = "let a of repos">{{a.name}}  {{"Created At: "+a.created_at}} </div> -->
+
+<table mdbTable style="margin-top: -10px">
+    <thead class="grey white-text">
+      <tr>
+        <th scope="col">TicketNumber</th>
+        <th scope="col">Price on Ticket</th>
+        <th scope="col">Date of Journey</th>
+        <th scope="col">Distance Travelled</th>
+      </tr>
+    </thead>
+    <tbody *ngFor = "let a of ticketList">       
+      <tr>
+        <td scope="row">{{a.ticketNumber}}</td>
+        <td>{{a.price}}</td>
+        <td>{{a.date |  date:'longDate'}}</td>
+        <td>{{a.distance}}</td>
+        <!-- star column -->
+      </tr>
+    </tbody>
+  </table>
+  
