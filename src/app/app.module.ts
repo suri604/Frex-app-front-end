@@ -7,13 +7,12 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TicketServiceService } from './ticket-service.service';
 import { ChatService } from './chat.service';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { AllTicketsComponent } from './all-tickets/all-tickets.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatRippleModule, MatDatepickerModule, MatNativeDateModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
-import { HomeComponent } from './home/home.component';
 import {AccordionModule} from 'ng-uikit';
-import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +44,9 @@ import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   providers: [TicketServiceService, ChatService],
   bootstrap: [AppComponent],
+  exports: [
+    MatIconModule
+  ]
 })
 export class AppModule { }
 export class MaterialModule {}
