@@ -75,30 +75,29 @@ export class SaveTicketComponent implements OnInit {
   //   }
   // }
   
-  url:any;
-  onFileSelected(event){
+  // url:any;
+  // onFileSelected(event){
     
-    this.selectedFile =<File>event.target.files[0];
-    var reader = new FileReader();
+  //   this.selectedFile =<File>event.target.files[0];
+  //   var reader = new FileReader();
       
-        reader.readAsDataURL(event.target.files[0]); // read file as data url
+  //       reader.readAsDataURL(event.target.files[0]); // read file as data url
   
-        reader.onload = (event) => { // called once readAsDataURL is completed
-        this.url = reader.result;
+  //       reader.onload = (event) => { // called once readAsDataURL is completed
+  //       this.url = reader.result;
 
-        }
+  //       }
 
-  }
-  onUpload() {
-    const fd = new FormData();
-    fd.append( 'image', this.selectedFile);
-    this.http.post('http://localhost:8063/photos/add', fd).subscribe(res => {
-      console.log(res);
-    })
-
-  }
+  // }
+  // onUpload() {
+  //   const fd = new FormData();
+  //   fd.append( 'image', this.selectedFile);
+  //   this.http.post('http://localhost:8063/photos/add', fd).subscribe(res => {
+  //     console.log(res);
+  //   })
+ // }
 }
 
- 
+
 
 

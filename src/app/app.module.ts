@@ -9,16 +9,26 @@ import { ChatService } from './chat.service';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import { MatRippleModule, MatDatepickerModule, MatNativeDateModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
 import {AccordionModule} from 'ng-uikit';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { ImageComponent } from './images/image/image.component';
+import { ImageListComponent } from './images/image-list/image-list.component';
+import { ImagesComponent } from './images/images.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    
-
+    ImageComponent,
+    ImageListComponent,
+    ImagesComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,26 +36,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatRippleModule,            // <----- this module will be deprecated in the future version.
-    MatDatepickerModule,        // <----- import(must)
-    MatNativeDateModule,
-    MatSliderModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,          // <----- import for date formating(optional)
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
     MDBBootstrapModule.forRoot(),
     AccordionModule,
     NgbModule,
-    MatCheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig1),
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
   ],
   providers: [TicketServiceService, ChatService],
   bootstrap: [AppComponent],
   exports: [
-    MatIconModule
+   
   ]
 })
 export class AppModule { }

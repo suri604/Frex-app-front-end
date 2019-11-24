@@ -1,17 +1,17 @@
 
 
  
-<div style="text-align: center; margin-top: 20px">
+
   <!-- <img [src]="url" height="400" alt="Uploaded image will be shown here"> <br />
   <input type='file' (change)="onSelectFile($event)"><br>
   <button type="submit" class="confirm"(click) = 
 'add()'>Confirm</button>
   <h1>Ticket Details</h1> -->
-  <h3>Ticket upload in JPG, JPEG ,PNG Format</h3>
+  <!-- <h3>Ticket upload in JPG, JPEG ,PNG Format</h3>
 <img [src]="url" height="400" alt="Uploaded image will be shown here"> <br />
 <input type="file" (change)="onFileSelected($event)" ><br>
 <button type="button" (click)="onUpload()">Upload</button><br><br>
-</div>
+</div> -->
 <!-- <div class="col-md-12">
     <mat-form-field>
       <input matInput #ticketNumber required placeholder="TicketNumber">
@@ -34,12 +34,11 @@
 
   <button type="button"
   (click)="saveTicket(ticketNumber.value, price.value ,picker._validSelected,  distance.value)">Click here to save</button> -->
-  <div class="container" style="margin-left: 400px">
+  <!-- <div class="container" style="margin-left: 400px">
   <div class="card m-3" style="width: 400px">
       <h5 class="card-header">Ticket Details</h5>
       <div class="card-body">
           <form [formGroup]="form" (ngSubmit)= "onSubmit()" >
-                <!-- (ngSubmit)="onSubmit(ticketNumber, price, date, distance)" -->
                   <div class="form-group">
                       <label>TicketNumber</label>
                       <input type="number" formControlName="ticketNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
@@ -75,11 +74,13 @@
                               </div>
                               <div class="text-center">
                                   <button class="btn btn-primary mr-1" type="submit" >Register</button>
-                                  <!-- (click)= "onSubmit(ticketNumber.value, price.value, date.value, distance.value)" -->
-                                  <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+                                  (click)= "onSubmit(ticketNumber.value, price.value, date.value, distance.value)" -->
+                                  <!-- <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
                               </div>
                               </form >  
+                              
       </div>
   </div>
- </div>
+ </div> -->
+ 
   <!-- https://stackblitz.com/edit/angular-8-reactive-form-validation -->
